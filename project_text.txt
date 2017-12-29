@@ -1,0 +1,714 @@
+#include<iostream>
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+#include<ctime>
+#include<cstdlib>
+#include<stdlib.h>
+#include<fstream>
+using namespace std;
+class timetable
+{
+	public:
+		string s1,s2,s3,s4,s5,s6,s7,s8;
+		void getdata()
+		{
+			cout<<"enter the subjects in sequence"<<endl;
+			cin>>s1;
+		   /* cin>>s2;
+			cin>>s3;
+			cin>>s4;
+			cin>>s5;
+			cin>>s6;
+			cin>>s7;
+			cin>>s8;			
+			*/
+		}
+		void putdata()
+		{
+			cout<<endl<<"\t\t\tTIME\t\t\tSUBJECT"<<endl;
+			cout<<endl<<endl;
+			cout<<"\t\t09:00 - 10:00\t\t\t"<<s1<<endl;
+		/*	cout<<"\t\t10:00 - 11:00\t\t\t"<<s2<<endl;
+			cout<<"\t\t11:00 - 12:00\t\t\t"<<s3<<endl;
+			cout<<"\t\t12:00 - 13:00\t\t\t"<<s4<<endl;
+			cout<<"\t\t13:00 - 14:00\t\t\t"<<s5<<endl;
+			cout<<"\t\t14:00 - 15:00\t\t\t"<<s6<<endl;
+			cout<<"\t\t15:00 - 16:00\t\t\t"<<s7<<endl;
+			cout<<"\t\t16:00 - 17:00\t\t\t"<<s8<<endl;
+		*/	
+		}
+};
+class note
+{
+	string s1;
+	public:
+		void getd()
+		{
+			getline(cin,s1);
+		}
+		void putd()
+		{ 
+				
+			cout<<endl<<endl<<") "<<s1<<endl;
+			cout<<endl;
+			
+		}
+};
+class table
+{
+	public:
+		void mon();
+		void tue();
+		void wed();
+		void thu();
+		void fri();
+		void hol();
+		void mon1();
+		void tue1();
+		void wed1();
+		void thu1();
+		void fri1();
+		void hol1();
+		void mon2();
+		void tue2();
+		void wed2();
+		void thu2();
+		void fri2();
+	   	void mon3();
+		void tue3();
+		void wed3();
+		void thu3();
+		void fri3();
+		void hol3();
+		void mon4();
+		void tue4();
+		void wed4();
+		void thu4();
+		void fri4();
+		void hol4();
+		
+};
+void table::mon()
+{
+	system("cls");
+	cout<<"HELLO SIR TODAY IS MONDAY\n"; 
+	mon1();
+	mon4();
+}
+void table::tue()
+{
+		system("cls");
+	cout<<"HELLO SIR TODAY IS TUESDAY\n";
+	tue1();
+	tue4();
+}
+void table::wed()
+{
+		system("cls");
+	cout<<"HELLO SIR TODAY IS WEDNESDAY\n";
+	wed1();
+//	wed4();
+}
+void table::thu()
+{
+		system("cls");
+	cout<<"HELLO SIR TODAY IS THURSDAY\n";
+	thu1();
+	thu4();
+	
+}
+void table::fri()
+{
+		system("cls");
+	cout<<"HELLO SIR TODAY IS FRIDAY\n";
+	fri1();
+	fri4();
+	
+}
+void table::hol()
+{
+		system("cls");
+	cout<<"HELLO SIR TODAY IS HOLIDAY\n";
+	hol1();
+	hol4();
+}
+void table::mon4()
+{
+	note o[5];
+	ifstream fillin;
+	fillin.open("r1.txt");
+	if(!fillin)
+	{
+		cout<<"cannot open file"<<endl;
+		exit(1);
+	}
+	cout<<"your reminder"<<endl;
+	for(int i=0;i<5;i++)
+	{
+		fillin.read((char*)&o[i],sizeof(o[i]));
+		o[i].putd();
+	}
+	fillin.close();
+}
+void table::tue4()
+{
+	note o[5];
+	ifstream fillin;
+	fillin.open("r2.txt");
+	if(!fillin)
+	{
+		cout<<"cannot open file"<<endl;
+		exit(1);
+	}
+	cout<<"your reminder"<<endl;
+	for(int i=0;i<5;i++)
+	{
+		fillin.read((char*)&o[i],sizeof(o[i]));
+		o[i].putd();
+	}
+	fillin.close();
+}
+void table::wed4()
+{
+	note o[5];
+	ifstream fillin;
+	fillin.open("r3.txt");
+	if(!fillin)
+	{
+		cout<<"cannot open file"<<endl;
+		exit(1);
+	}
+	cout<<"your reminder"<<endl;
+	for(int i=0;i<5;i++)
+	{
+		fillin.read((char*)&o[i],sizeof(o[i]));
+		o[i].putd();
+	}
+	fillin.close();
+}
+void table::thu4()
+{
+	note o[5];
+	ifstream fillin;
+	fillin.open("r4.txt");
+	if(!fillin)
+	{
+		cout<<"cannot open file"<<endl;
+		exit(1);
+	}
+	cout<<"your reminder"<<endl;
+	for(int i=0;i<5;i++)
+	{
+		fillin.read((char*)&o[i],sizeof(o[i]));
+		o[i].putd();
+	}
+	fillin.close();
+}
+void table::fri4()
+{
+	note o[5];
+	ifstream fillin;
+	fillin.open("r5.txt");
+	if(!fillin)
+	{
+		cout<<"cannot open file"<<endl;
+		exit(1);
+	}
+	cout<<"your reminder"<<endl;
+	for(int i=0;i<5;i++)
+	{
+		fillin.read((char*)&o[i],sizeof(o[i]));
+		o[i].putd();
+	}
+	fillin.close();
+}
+void table::hol4()
+{
+	note o[5];
+	ifstream fillin;
+	fillin.open("r6.txt");
+	if(!fillin)
+	{
+		cout<<"cannot open file"<<endl;
+		exit(1);
+	}
+	cout<<"your reminder"<<endl;
+	for(int i=0;i<5;i++)
+	{
+		fillin.read((char*)&o[i],sizeof(o[i]));
+		o[i].putd();
+	}
+	fillin.close();
+}
+void table::mon1()
+{
+	timetable t;
+	ifstream iff;
+	iff.open("mon.txt");
+	if(!iff)
+	{
+		cout<<"CANNOT OPEN TIMETABLE PLEASE ENTER ONE FROM THE MAIN MENU"<<endl;
+		exit(1);
+	}
+	iff.read((char*)&t,sizeof(t));
+	t.putdata();
+	iff.close();
+}
+void table::tue1()
+{
+	timetable t;
+	ifstream iff;
+	iff.open("tue.txt");
+	if(!iff)
+	{
+		cout<<"CANNOT OPEN TIMETABLE PLEASE ENTER ONE FROM THE MAIN MENU"<<endl;
+		exit(1);
+	}
+	iff.read((char*)&t,sizeof(t));
+	t.putdata();
+	iff.close();
+}
+void table::wed1()
+{
+	timetable t;
+	ifstream iff;
+	iff.open("wed.txt");
+	if(!iff)
+	{
+		cout<<"CANNOT OPEN TIMETABLE PLEASE ENTER ONE FROM THE MAIN MENU"<<endl;
+		exit(1);
+	}
+	iff.read((char*)&t,sizeof(t));
+	t.putdata();
+	iff.close();
+}
+void table::thu1()
+{
+	timetable t;
+	ifstream iff;
+	iff.open("thu.txt");
+	if(!iff)
+	{
+		cout<<"CANNOT OPEN TIMETABLE PLEASE ENTER ONE FROM THE MAIN MENU"<<endl;
+		exit(1);
+	}
+	iff.read((char*)&t,sizeof(t));
+	t.putdata();
+	iff.close();
+}
+void table::fri1()
+{
+	timetable t;
+	ifstream iff;
+	iff.open("fri.txt");
+	if(!iff)
+	{
+		cout<<"CANNOT OPEN TIMETABLE PLEASE ENTER ONE FROM THE MAIN MENU"<<endl;
+		exit(1);
+	}
+	iff.read((char*)&t,sizeof(t));
+	t.putdata();
+	iff.close();
+}
+void table::hol1()
+{
+	system("cls");
+	cout<<endl<<endl<<endl<<"\t\t\t\tNO TIMETABLE\t\t\t\t\t\t\t"<<endl;
+	
+}
+void table::mon2()
+{
+		timetable t;
+	cout<<"please enter time table "<<endl;
+	ofstream off;
+	off.open("mon.txt");
+	t.getdata();
+	off.write((char*)&t,sizeof(t));
+	off.close();
+	
+}
+void table::tue2()
+{
+		timetable t;
+	cout<<"please enter time table "<<endl;
+	ofstream off;
+	off.open("tue.txt");
+	t.getdata();
+	off.write((char*)&t,sizeof(t));
+	off.close();
+}
+void table::wed2()
+{
+		timetable t;
+	cout<<"please enter time table "<<endl;
+	ofstream off;
+	off.open("wed.txt");
+	t.getdata();
+    off.write((char*)&t,sizeof(t));
+	off.close();
+}
+void table::thu2()
+{
+		timetable t;
+	cout<<"please enter time table "<<endl;
+	ofstream off;
+	off.open("thu.txt");
+	t.getdata();
+	off.write((char*)&t,sizeof(t));
+	off.close();
+}
+void table::fri2()
+{
+		timetable t;
+	cout<<"please enter time table "<<endl;
+	ofstream off;
+	off.open("fri.txt");
+	t.getdata();
+	off.write((char*)&t,sizeof(t));
+	off.close();
+}
+void table::mon3()
+{
+		note o[5];
+	ofstream off;
+	off.open("r1.txt");
+	cout<<"please enter the content line by line(5 lines atmost)"<<endl;
+	for(int i=0;i<5;i++)
+	{
+		o[i].getd();
+		off.write((char*)&o[i],sizeof(o[i]));
+		
+	}
+	off.close();
+}
+void table::tue3()
+{
+		note o[5];
+	ofstream off;
+	off.open("r2.txt");
+	cout<<"please enter the content line by line(5 lines atmost)"<<endl;
+	for(int i=0;i<5;i++)
+	{
+		o[i].getd();
+		off.write((char*)&o[i],sizeof(o[i]));
+		
+	}
+	off.close();
+}
+void table::wed3()
+{
+		note o[5];
+	ofstream off;
+	off.open("r3.txt");
+	cout<<"please enter the content line by line(5 lines atmost)"<<endl;
+	for(int i=0;i<5;i++)
+	{
+		o[i].getd();
+		off.write((char*)&o[i],sizeof(o[i]));
+		
+	}
+	off.close();
+}
+void table::thu3()
+{
+		note o[5];
+	ofstream off;
+	off.open("r4.txt");
+	cout<<"please enter the content line by line(5 lines atmost)"<<endl;
+	for(int i=0;i<5;i++)
+	{
+		o[i].getd();
+		off.write((char*)&o[i],sizeof(o[i]));
+		
+	}
+	off.close();
+}
+void table::fri3()
+{
+		note o[5];
+	ofstream off;
+	off.open("r5.txt");
+	cout<<"please enter the content line by line(5 lines atmost)"<<endl;
+	for(int i=0;i<5;i++)
+	{
+		o[i].getd();
+		off.write((char*)&o[i],sizeof(o[i]));
+		
+	}
+	off.close();
+}
+void table::hol3()
+{
+		note o[5];
+	ofstream off;
+	off.open("r6.txt");
+	cout<<"please enter the content line by line(5 lines atmost)"<<endl;
+	for(int i=0;i<5;i++)
+	{
+		o[i].getd();
+		off.write((char*)&o[i],sizeof(o[i]));
+		
+	}
+	off.close();
+}
+class salutation
+{
+	public:
+		void morning();
+		void noon();
+		void evening();
+		void mn();
+		void night();
+		
+};
+void salutation::morning()
+{
+	int a,t;
+	srand(time(NULL));
+	a=(rand()%4);
+	switch(a)
+	{  case 0:cout<<"GOOD MORNING SIR HOW IS IT GOING"<<endl;
+	              break; 
+	case 1: cout<<"GOOD MORNING SIR HOW ARE YOU"<<endl;
+	              break;
+	   case 2: cout<<"GOOD MORNING ITS BEAUTIFUL DAY TODAY"<<endl;
+	               break;
+		case 3: cout<<"GOOD MORNING NEW DAY NEW SPIRIT SIR "<<endl;		              
+		 
+	}
+	time_t now=time(0);
+	tm *ltm=localtime(&now);
+	t=ltm->tm_hour;
+	if(t>=8&&t<9)
+	cout<<"HURRY SIR YOU ARE  LATE FOR BREAKFAST"<<endl;
+	
+	
+}
+void salutation::noon()
+{
+	int a;
+	srand(time(NULL));
+	a=(rand()%4);
+	switch(a)
+	{
+		case 0: cout<<"GOOD AFTERNOON SIR HOW IS YOUR DAY GOING"<<endl;
+		break;
+		case 1:  cout<<"GOOD AFTERNOON HOPE YOUR DAY IS GOING GOOD"<<endl;
+		break;
+		case 2: cout<<"AFTERNOON SIR "<<endl;
+		break;
+		case 3: cout<<"GOOD AFTERNOON SIR !!!! WHAT BRING YOU HERE NOW"<<endl;
+		
+	}
+
+}
+void salutation::evening()
+{
+	int a,t;
+	srand(time(NULL));
+	a=(rand()%4);
+	switch(a)
+	{
+		case 0: cout<<"GOOD EVENING SIR HOPE YOU HAD A GOOD DAY TODAY"<<endl;
+		break;
+		case 1: cout<<"GOOD EVENING SIR HOW WAS DAY TODAY"<<endl;
+		break;
+		case 2: cout<<"EVENING SIR HOW CAN I HELP YOU"<<endl;
+		break;
+		case 3: cout<<"GOOD EVENING SIR WHAT CAN I DO FOR YOU"<<endl;
+		
+	}
+	time_t now=time(0);
+	tm *ltm=localtime(&now);
+	t=ltm->tm_hour;
+	if(t>=18&&t<19)
+	cout<<"SORRY SIR YOU MISSED YOUR EVENING SNACK"<<endl;
+	if(t<18&&t>=17)
+	cout<<"HURRY!!!! SIR FOR YOUR EVENING SNACK"<<endl;
+	
+	
+}
+void salutation::mn()
+{
+	int a;
+	srand(time(NULL));
+	a=(rand()%2);
+	switch(a)
+	{
+	case 0: cout<<"GOODBYE SIR HAVE A NICE DAY AHEAD"<<endl;
+	break;
+	case 1: cout<<"GOODBYE SIR ENJOY YOUR DAY"<<endl;
+	break;
+}
+}
+void salutation::night()
+{
+	int a;
+	srand(time(NULL));
+	a=(rand()%2);
+	switch(a)
+	{ case 0: cout<<"GOOD NIGHT SIR SEE YOU TOMORROW"<<endl;
+	break;;
+	case 1: cout<<"GOOD NIGHT SIR SWEET DREAMS"<<endl;
+	break;
+		
+	}
+}
+class fun
+{
+	public:
+		void fb();
+		void mail();
+		void pn();
+};
+void fun::fb()
+{
+	system("C:\\project\\fb");
+}
+void fun::mail()
+{
+	system("C:\\project\\mail");
+}
+void fun::pn()
+{
+	
+}
+int main()
+{
+	string s1("mon"),s2("tue"),s3("wed"),s4("thu"),s5("fri"),s6("sat"),s7("sun"),s8,s9;
+	int d,c,t,y,k,z;
+	salutation s;
+	fun f;
+	table o;
+	time_t now=time(0);
+	tm *ltm=localtime(&now);
+	d= ltm->tm_wday;
+	t=ltm->tm_hour;
+	if(t>0&&t<12)
+	s.morning();
+	if(t<17&&t>=12)
+	s.noon();
+	if(t>=17&&t<24)
+	s.evening();
+	system("pause");
+	system("cls");
+	cout<<"NOW SIR WHAT WOULD YOU LIKE TO DO"<<endl;
+	cout<<"PLEASE ENTER YOUR CHOICE"<<endl<<"\t\t1)TODAY'S COLLEGE TIME TABLE"<<endl<<endl<<"\t\t2)DO YOU WANT TO LOG INTO UMS"<<endl<<endl<<"\t\t3)DO YOU WANT TO SET ANY IMPORTANT REMINDER"<<endl<<endl;
+	cout<<"\t\t4)DO YOU WANT TO UPDATE TIME TABLE"<<endl<<endl<<"\t\t5)DO YOU WANT TO HAVE SOME FUN!!!"<<endl<<endl<<"\t\t6)DO YOU WANT TO QUIT"<<endl;
+	cin>>c;
+	switch(c)
+	{
+		case 1: switch(d)
+	          	{
+	          		case 0: o.hol();
+	          		break;
+	          		case 1: o.mon();
+	          		break;
+	          		case 2:  o.tue();
+	          		break;
+	          		case 3: o.wed();
+	          		break;
+	          		case 4: o.thu();
+	          		break;
+	          		case 5: o.fri();
+	          		break;
+	          		case 6: o.hol();
+	          		break;
+	          		
+			
+		         }
+		         break;
+		case 2: system("C:\\project\\ums");
+		        break;
+		case 3: system("cls");
+		       cout<<"FOR WHICH DAY YOU WANT TO SET A REMINDER"<<endl;
+		       cout<<"PLEASE ENTER FIRST THREE LETTERS OF THE WEEK"<<endl; 
+			   cin>>s8;
+			   y=s1.compare(s8);
+			   if(y==0)
+			   o.mon3();
+			   else
+			   	y=s2.compare(s8);
+			   if(y==0)
+			   o.tue3();
+			   else
+			   	y=s3.compare(s8);
+			   	if(y==0)
+			   	o.wed3();
+			   	else
+			   		y=s4.compare(s8);
+			       if(y==0)
+			       o.thu3();
+			       else
+			       	y=s5.compare(s8);
+			       	if(y==0)
+			       	o.fri3();
+			       	else
+			       		y=s6.compare(s8);
+		         if(y==0){
+				 
+		         o.hol3();break;
+				 }
+		         else 
+		         	y=s7.compare(s8);
+		         if(y==0)
+		         o.hol3();
+		         break;
+		case 4:
+		          system("cls");
+		        cout<<"PLEASE ENTER THE DAY FOR WHICH YOU WANT TO UPDATE TIME TABLE"<<endl<<"PLEASE ENTER FIRST THREE LETTERS"<<endl;
+		        cin>>s9;
+			   y=s1.compare(s9);
+			   if(y==0){
+			   
+			   o.mon2();break;}
+			   else
+			   	y=s2.compare(s9);
+			   if(y==0){
+			   o.tue2();
+			   break;}
+			   else
+			   	y=s3.compare(s9);
+			   	if(y==0){
+				   
+			   	o.wed2();break;}
+			   	else
+			   		y=s4.compare(s9);
+			       if(y==0)
+			       o.thu2();
+			       else
+			       	y=s5.compare(s9);
+			       	if(y==0)
+			       	o.fri2();
+			       
+		         break;
+				         
+		case 5: cout<<"SO YOU WANT TO HAVE SOME FUN"<<endl;
+		        cout<<"SO PLEASE ENTER YOUR CHOICE"<<endl;
+				cout<<"1) FACEBOOK"<<endl<<"2) GMAIL"<<endl;
+				cin>>k;
+				switch(k)
+				{
+				case 1: f.fb();
+				break;
+				case 2: f.mail();
+				break;
+				case 69: f.pn();
+			}
+				break;
+		case 6: if(t>0&&t<=16)
+		        s.mn();
+				break;
+			    if(t>16&&t<24)
+				s.night();
+				break;	
+				       
+		                 
+	}
+	return 0;
+	
+	
+	
+	
+}
